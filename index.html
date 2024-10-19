@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Ride </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.jsのCDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav>
+            <div class="logo">
+                <h1>G Ride</h1>
+            </div>
+        </nav>
+        <div class="clock" id="clock"></div>
+    </header>
+
+    <!-- カウントボタンはヘッダーの下に残す -->
+    <section class="power-section">
+        <div class="stat" id="powerStat">
+            <h3>現在の発電量</h3>
+            <p id="powerGenerated">100 kWh</p>
+        </div>
+        <div class="stat" id="carbonStat">
+            <h3>脱炭素量</h3>
+            <p id="carbonReduction">1 トン CO2</p>
+        </div>
+        <div class="stat" id="treeStat">
+            <h3>相当する植樹数</h3>
+            <p id="treeCount">150 本</p>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Exercise for my future, and a GOOD future for the Earth as well！</h2>
+            <p>自分のためが地球のために繋がる。フィットネスで発電し、脱炭素化に貢献する</p>
+        </div>
+    </section>
+
+    <!-- ③3つのグラフを横並びで表示 -->
+    <section id="chartsSection" style="background-color: black; padding: 20px;">
+        <div class="chart-container">
+            <canvas id="powerChart"></canvas>
+            <h4 style="color: white; text-align: center;">目標: 500 kWh</h4>
+        </div>
+        <div class="chart-container">
+            <canvas id="carbonChart"></canvas>
+            <h4 style="color: white; text-align: center;">目標: 2 トン CO2</h4>
+        </div>
+        <div class="chart-container">
+            <canvas id="treeChart"></canvas>
+            <h4 style="color: white; text-align: center;">目標: 1000 本</h4>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Team G-Ride</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
